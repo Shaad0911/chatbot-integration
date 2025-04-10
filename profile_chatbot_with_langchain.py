@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from pymongo import MongoClient
 from langchain.chat_models import init_chat_model
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.messages import HumanMessage, SystemMessage
+
 
 load_dotenv()
 
@@ -63,7 +63,7 @@ if __name__ == '__main__':
         ("human", "{question}")
     ])
 
-    print("\nChatbot is ready. Ask questions about profiles!\n")
+    print("\nHey Shadab! Ask me anything buddy\n")
 
     while True:
         user_input = input("You: ")
@@ -78,6 +78,6 @@ if __name__ == '__main__':
 
         try:
             response = model.invoke(messages)
-            print(f"Bot: {response.content}\n")
+            print(f"buddy: {response.content}\n")
         except Exception as e:
             print("Error during chat:", e)
