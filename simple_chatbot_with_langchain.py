@@ -21,3 +21,4 @@ if __name__ == '__main__':
 
     response = model.invoke(messages)
     print(response.content)
+    
