@@ -13,7 +13,7 @@ if __name__ == '__main__':
         exit(1)
 
     model = "mistral-large-latest"
-client = genai.Client(api_key="AIzaSyAFtqD-NIJ3T-OLTrQsqvDFnyedIY1Qkcc")
+client = genai.Client(api_key= os.getenv("GEMINI_API_KEY"))
 
 response = client.models.generate_content(
     model="gemini-2.0-flash", contents="describe the best thing about bhopal",
