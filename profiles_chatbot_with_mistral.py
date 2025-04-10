@@ -115,3 +115,4 @@ if __name__ == "__main__":
 
     chat_bot = Chatbot(api_key, "mistral-large-latest", mongo_url, db_name, collection_name)
     chat_bot.run()
+
